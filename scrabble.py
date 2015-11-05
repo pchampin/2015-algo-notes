@@ -1,0 +1,100 @@
+def score_scrabble_lettre(lettre, langue):
+    """
+    :entrée lettre: str
+    :entrée langue: str
+    :pré-cond: len(lettre) == 1 ; langue est un code standard de 2 lettres
+    :sortie score: int
+    :post-cond: score est le score de la lettre 'lettre'
+                au scrabble dans la langue 'langue'
+    """
+    if langue not in VALUE:
+        langue = "??"
+    return VALUE[langue].get(lettre, 0)
+
+# source: https://en.wikipedia.org/wiki/Scrabble_letter_distributions
+VALUE = {
+    "en": {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 2,
+        "e": 1,
+        "f": 4,
+        "g": 2,
+        "h": 4,
+        "i": 1,
+        "j": 8,
+        "k": 5,
+        "l": 1,
+        "m": 3,
+        "n": 1,
+        "o": 1,
+        "p": 3,
+        "q": 10,
+        "r": 1,
+        "s": 1,
+        "t": 1,
+        "u": 1,
+        "v": 4,
+        "w": 4,
+        "x": 8,
+        "y": 4,
+        "z": 10,
+    },
+    "fr": {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 2,
+        "e": 1,
+        "f": 4,
+        "g": 2,
+        "h": 4,
+        "i": 1,
+        "j": 8,
+        "k": 10,
+        "l": 1,
+        "m": 2,
+        "n": 1,
+        "o": 1,
+        "p": 3,
+        "q": 8,
+        "r": 1,
+        "s": 1,
+        "t": 1,
+        "u": 1,
+        "v": 4,
+        "w": 10,
+        "x": 10,
+        "y": 10,
+        "z": 10,
+    },
+    "??": {
+        "a": 1,
+        "b": 1,
+        "c": 1,
+        "d": 1,
+        "e": 1,
+        "f": 1,
+        "g": 1,
+        "h": 1,
+        "i": 1,
+        "j": 1,
+        "k": 1,
+        "l": 1,
+        "m": 1,
+        "n": 1,
+        "o": 1,
+        "p": 1,
+        "q": 1,
+        "r": 1,
+        "s": 1,
+        "t": 1,
+        "u": 1,
+        "v": 1,
+        "w": 1,
+        "x": 1,
+        "y": 1,
+        "z": 1,
+    },
+}
